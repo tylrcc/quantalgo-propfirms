@@ -1,0 +1,28 @@
+# Prop Firm Challenge Algorithm - Requirements
+# ===========================================
+
+# Core dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+
+# Trading/data
+backtrader>=1.97.0
+yfinance>=0.2.3
+ccxt>=4.0.0
+websockets>=11.0
+
+# Async IO for API connections
+aiohttp>=3.8.0
+aiofiles>=23.0.0
+
+# Utilities
+python-dateutil>=2.8.0
+pytz>=2023.0
+
+# Optional: for advanced features
+scikit-learn>=1.3.0
+tqdm>=4.66.0
+
+# For logging
+python-json-logger>=2.0.0
