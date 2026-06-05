@@ -1,44 +1,39 @@
-venv/
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
+*.py[cod]
 *.egg-info/
-.installed.cfg
+.eggs/
 *.egg
-MANIFEST
+build/
+dist/
+sdist/
+wheels/
+.Python
+.venv/
+venv/
+env/
 
-# Environment Variables
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Project artefacts
+data/
+logs/
+*.log
+*.parquet
+*.png
+!docs/**/*.png
+
+# Secrets / local config
 .env
 .env.local
 
-# Logs
-logs/
-*.log
-
-# Data
-data/
-*.csv
-*.db
-*.sqlite3
-
-# IDEs
-.vscode/
-.idea/
+# OS / editor
 .DS_Store
+.idea/
+.vscode/
 .claude/

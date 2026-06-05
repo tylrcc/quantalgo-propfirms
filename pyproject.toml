@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantalgo-propfirms"
+version = "1.0.0"
+description = "Opening-Range-Breakout trading engine optimised for prop-firm funded-account challenges."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "tylrcc" }]
+keywords = ["trading", "algorithmic-trading", "futures", "prop-firm", "backtesting", "orb"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+data = ["yfinance>=0.2.40", "pyarrow>=14.0"]
+plots = ["matplotlib>=3.7"]
+live = ["aiohttp>=3.9"]
+env = ["python-dotenv>=1.0"]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.6",
+]
+all = [
+    "yfinance>=0.2.40", "pyarrow>=14.0", "matplotlib>=3.7",
+    "aiohttp>=3.9", "python-dotenv>=1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/tylrcc/quantalgo-propfirms"
+Repository = "https://github.com/tylrcc/quantalgo-propfirms"
+Issues = "https://github.com/tylrcc/quantalgo-propfirms/issues"
+
+[project.scripts]
+quantalgo = "quantalgo.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
