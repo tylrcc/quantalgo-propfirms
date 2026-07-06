@@ -18,7 +18,7 @@ Complete rewrite into an installable, tested Python package.
 - Bootstrap Monte-Carlo challenge pass-rate simulator with EV and percentile outputs.
 - Broker abstraction with an in-memory `PaperBroker` and an async `TradovateBroker`.
 - `quantalgo` CLI (`backtest`, `montecarlo`, `info`) with banner and text reports.
-- Pytest test-suite, GitHub Actions CI (Python 3.10–3.12), MIT license, packaging
+- Pytest test-suite, GitHub Actions CI (Python 3.10-3.12), MIT license, packaging
   (`pyproject.toml`), `Makefile`, and `.env.example`.
 
 ### Fixed

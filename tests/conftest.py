@@ -25,7 +25,7 @@ def synthetic_df() -> pd.DataFrame:
 def one_day_bars() -> pd.DataFrame:
     """A hand-crafted single session with a clean long breakout to take-profit."""
     rows = [
-        # (time, open, high, low, close) — opening range (first 2 min) = [100, 101]
+        # (time, open, high, low, close), opening range (first 2 min) = [100, 101]
         ("09:30", 100.5, 101.0, 100.0, 100.5),
         ("09:31", 100.5, 101.0, 100.0, 100.5),
         ("09:32", 100.6, 102.2, 100.5, 102.0),  # close 102 > 101 -> long entry

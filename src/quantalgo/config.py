@@ -12,7 +12,7 @@ Environment variables (all optional)::
     QA_TRADOVATE_PASSWORD
     QA_TRADOVATE_API_KEY
     QA_TRADOVATE_ORG
-    QA_TRADOVATE_SANDBOX      "true"/"false" — paper vs live
+    QA_TRADOVATE_SANDBOX      "true"/"false", paper vs live
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ import os
 from dataclasses import dataclass, field, replace
 from functools import lru_cache
 
-try:  # optional dependency — never required
+try:  # optional dependency, never required
     from dotenv import load_dotenv
 
     load_dotenv()

@@ -17,7 +17,7 @@
 
 Prop-firm challenges (Topstep, Apex, etc.) have a **convex payoff**: your downside is
 capped at the challenge fee, but a pass unlocks a funded account with uncapped upside.
-That structure rewards a strategy with a **high win-rate and bounded daily risk** — exactly
+That structure rewards a strategy with a **high win-rate and bounded daily risk**, exactly
 what a disciplined Opening Range Breakout delivers. This project turns that idea into a
 tested, reproducible engine you can **backtest**, **stress-test with Monte-Carlo**, and
 **run on a paper account**.
@@ -28,18 +28,18 @@ tested, reproducible engine you can **backtest**, **stress-test with Monte-Carlo
 
 ## Features
 
-- 📈 **ORB strategy engine** — opening-range detection, breakout entries, fixed-multiple
+- 📈 **ORB strategy engine**, opening-range detection, breakout entries, fixed-multiple
   TP/SL, and a volatility filter (`quantalgo.strategy`).
-- 🧪 **Event-driven backtester** — correct position sizing with Topstep-style **daily loss
+- 🧪 **Event-driven backtester**, correct position sizing with Topstep-style **daily loss
   limit**, **trailing drawdown**, and **profit target** enforcement (`quantalgo.backtest`).
-- 🎲 **Monte-Carlo pass-rate simulator** — bootstrap thousands of challenge attempts to
+- 🎲 **Monte-Carlo pass-rate simulator**, bootstrap thousands of challenge attempts to
   estimate pass rate, expected value, and P&L percentiles (`quantalgo.montecarlo`).
-- 🔌 **Pluggable execution** — in-memory `PaperBroker` for testing plus an async
+- 🔌 **Pluggable execution**, in-memory `PaperBroker` for testing plus an async
   `TradovateBroker` wrapper for Topstep's venue (`quantalgo.execution`).
-- 🛰️ **Offline-first data** — Yahoo Finance loader with Parquet caching and a deterministic
+- 🛰️ **Offline-first data**, Yahoo Finance loader with Parquet caching and a deterministic
   **synthetic generator**, so everything runs without a network (`quantalgo.data`).
-- 🧰 **Batteries included** — typed config, a `quantalgo` CLI, text reports & charts, a
-  pytest suite, and CI across Python 3.10–3.12.
+- 🧰 **Batteries included**, typed config, a `quantalgo` CLI, text reports & charts, a
+  pytest suite, and CI across Python 3.10-3.12.
 
 ## Architecture
 
@@ -80,7 +80,7 @@ Example output:
 
 ```
 ──────────────────────────────────────────
- Backtest — MES (2025-12-06 → 2026-06-04)
+ Backtest, MES (2025-12-06 → 2026-06-04)
 ──────────────────────────────────────────
  Total Trades            42
  Win Rate            64.29%

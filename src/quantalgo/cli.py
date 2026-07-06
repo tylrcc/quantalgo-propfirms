@@ -52,7 +52,7 @@ def cmd_backtest(args: argparse.Namespace) -> int:
     trades = ORBStrategy(settings.orb).generate_trades(df)
     result = Backtester(settings.challenge, settings.symbol_spec).run(trades)
 
-    print(format_metrics(f"Backtest — {settings.symbol} ({start} → {end})", result.metrics))
+    print(format_metrics(f"Backtest, {settings.symbol} ({start} → {end})", result.metrics))
     print(f"\nChallenge outcome: {result.outcome.upper()}  •  {len(result.trades)} trades")
 
     if args.plot and result.trades:
@@ -78,7 +78,7 @@ def cmd_montecarlo(args: argparse.Namespace) -> int:
 
     sim = MonteCarloSimulator(settings.challenge, settings.montecarlo)
     result = sim.run(pnls)
-    print(format_metrics(f"Monte-Carlo — {settings.symbol} ({args.sims:,} sims)", result.as_dict()))
+    print(format_metrics(f"Monte-Carlo, {settings.symbol} ({args.sims:,} sims)", result.as_dict()))
     return 0
 
 

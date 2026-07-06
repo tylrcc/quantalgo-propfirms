@@ -2,10 +2,10 @@
 
 Two implementations share a tiny :class:`Broker` protocol:
 
-* :class:`PaperBroker` — an in-process simulator used for paper trading and tests. It
+* :class:`PaperBroker`, an in-process simulator used for paper trading and tests. It
   fills market orders instantly at the supplied reference price and tracks a flat/long/
   short position plus realised P&L.
-* :class:`TradovateBroker` — a thin async wrapper around the Tradovate REST API (the
+* :class:`TradovateBroker`, a thin async wrapper around the Tradovate REST API (the
   venue behind Topstep). Sandbox mode is supported for paper accounts; live trading is
   intentionally guarded until real OAuth2 credentials are wired in.
 

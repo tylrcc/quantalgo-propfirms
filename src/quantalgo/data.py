@@ -8,7 +8,7 @@ whole pipeline is exercised offline.
 
 All returned frames share one canonical schema: a tz-naive ``DatetimeIndex`` plus
 ``open, high, low, close, volume`` float columns, restricted to the Regular Trading
-Hours session (09:30–16:00 US/Eastern, expressed in naive local time).
+Hours session (09:30-16:00 US/Eastern, expressed in naive local time).
 """
 
 from __future__ import annotations
@@ -166,7 +166,7 @@ class DataLoader:
 
         try:
             df.to_parquet(cache)
-        except Exception as exc:  # pyarrow/fastparquet not installed — caching optional
+        except Exception as exc:  # pyarrow/fastparquet not installed, caching optional
             logger.info("Skipping cache write (%s)", exc)
 
 

@@ -15,7 +15,7 @@ def test_long_breakout_hits_take_profit(one_day_bars, breakout_params):
 
 
 def test_volatility_filter_skips_quiet_day(one_day_bars):
-    # require a 50-point opening range — our synthetic day is ~1 point, so no trade
+    # require a 50-point opening range, our synthetic day is ~1 point, so no trade
     params = ORBParams(opening_range_minutes=2, min_range_points=50.0)
     assert ORBStrategy(params).generate_trades(one_day_bars) == []
 

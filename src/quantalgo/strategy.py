@@ -162,7 +162,7 @@ class ORBStrategy:
                     exit_time, exit_price, reason = ts, target, "TP"
                     break
         else:
-            # never hit a barrier — flatten at the final close of the session
+            # never hit a barrier, flatten at the final close of the session
             last_ts = sig.bars.index[-1]
             exit_time = last_ts
             exit_price = float(sig.bars.loc[last_ts, "close"])
